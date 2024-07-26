@@ -4,7 +4,7 @@ from modelpy_abm.main import AgentModel
 
 
 def constructModel() -> AgentModel:
-    def generateInitialData():
+    def generateInitialData(model: AgentModel):
         initial_data = {
             "a_alpha": random.randint(1, 4),
             "a_beta": random.randint(1, 4),
