@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from modelpy_abm.main import AgentModel
+from emergent.main import AgentModel
 
 
 def generateInitialData(model: AgentModel):
