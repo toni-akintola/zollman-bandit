@@ -56,20 +56,8 @@ def constructModel() -> AgentModel:
 
     model.set_initial_data_function(generateInitialData)
     model.set_timestep_function(generateTimestepData)
+    
+    model["variations"] = ["2008", "2010"]
 
     return model
 
-
-model = constructModel()
-model["num_nodes"] = 20
-model.initialize_graph()
-
-timesteps = 20
-
-for _ in range(timesteps):
-    model.timestep()
-
-graph = model.get_graph()
-
-for node, node_data in graph.nodes(data=True):
-    print(node_data["a_expectation"], node_data["b_expectation"])
